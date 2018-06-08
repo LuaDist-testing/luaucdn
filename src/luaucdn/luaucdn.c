@@ -12,31 +12,32 @@ int get_unicode_version(lua_State *L) {
 }
 
 int get_bidi_class(lua_State *L) {
-  uint32_t c = lua_tounsigned(L, 1);
+  uint32_t c = lua_tointeger(L, 1);
   lua_pushinteger(L, ucdn_get_bidi_class(c));
   return 1;
 }
 
 int paired_bracket_type(lua_State *L) {
-  uint32_t c = lua_tounsigned(L, 1);
+  uint32_t c = lua_tointeger(L, 1);
   lua_pushinteger(L, ucdn_paired_bracket_type(c));
   return 1;
 }
 
 int paired_bracket(lua_State *L) {
-  uint32_t c = lua_tounsigned(L, 1);
+  uint32_t c = lua_tointeger(L, 1);
   lua_pushinteger(L, ucdn_paired_bracket(c));
   return 1;
 }
 
 int compat_decompose(lua_State *L) {
-  uint32_t c = lua_tounsigned(L, 1);
+  uint32_t c = lua_tointeger(L, 1);
 
   uint32_t decomposed[18];
   unsigned int len = ucdn_compat_decompose(c, decomposed);
 
   lua_newtable(L);
-  for (unsigned int i = 0; i < len; i++) {
+  unsigned int i;
+  for (i = 0; i < len; i++) {
     lua_pushinteger(L, i+1);
     lua_pushinteger(L, decomposed[i]);
     lua_settable(L,-3);

@@ -1,16 +1,16 @@
 -- This file was automatically generated for the LuaDist project.
 
 package = "luaucdn"
-version = "0.0.5-0"
+version = "0.0.6-0"
 -- LuaDist source
 source = {
-  tag = "0.0.5-0",
+  tag = "0.0.6-0",
   url = "git://github.com/LuaDist-testing/luaucdn.git"
 }
 -- Original source
 -- source = {
 --   url = "git://github.com/deepakjois/luaucdn",
---   tag = "v0.0.5"
+--   tag = "v0.0.6"
 -- }
 description = {
   summary = "Lua bindings for ucdn",
