@@ -1,9 +1,17 @@
+-- This file was automatically generated for the LuaDist project.
+
 package = "luaucdn"
-version = "0.0.3-0"
+version = "0.0.5-0"
+-- LuaDist source
 source = {
-  url = "git://github.com/deepakjois/luaucdn",
-  tag = "v0.0.3"
+  tag = "0.0.5-0",
+  url = "git://github.com/LuaDist-testing/luaucdn.git"
 }
+-- Original source
+-- source = {
+--   url = "git://github.com/deepakjois/luaucdn",
+--   tag = "v0.0.5"
+-- }
 description = {
   summary = "Lua bindings for ucdn",
   homepage = "https://github.com/deepakjois/luaucdn",
@@ -11,7 +19,7 @@ description = {
   maintainer = "Deepak Jois <deepak.jois@gmail.com>"
 }
 dependencies = {
-  "lua ~> 5.2"
+  "lua >= 5.2"
 }
 build = {
   type = "builtin",
